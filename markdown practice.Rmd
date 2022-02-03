@@ -1,0 +1,34 @@
+---
+title: "markdown practice"
+author: "Dai Moroi"
+date: "2/2/2022"
+output: pdf_document
+bibliography: bibliography.bib
+---
+
+*Hello***This is a test**
+
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2b
+
+- Item 1
+- Item 2 
+  - Item 2a
+  - Item 2b
+  
+```{r}
+
+if(!require("AER"))install.packages("AER")
+library(tidyverse)
+library(AER)
+
+data("DoctorVisits", package = "AER")
+
+DoctorVisits |>
+  ggplot(aes(x = illness)) +
+  geom_histogram(stat = "count")
+```
+  
+  
